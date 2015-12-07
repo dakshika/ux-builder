@@ -13,6 +13,8 @@
     <!-- Font Awesome CSS -->
     <link href="libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
+    <link href="libs/bootstrap-slider-5.3.1/css/bootstrap-slider.min.css" rel="stylesheet" type="text/css" />
+
     <!-- Font WSO2 CSS -->
     <link href="libs/font-wso2_1.2/css/font-wso2.css" rel="stylesheet" type="text/css" />
 
@@ -93,26 +95,228 @@
     </nav>
 </div>
 
-<div class="container">
+<div class="container-fluid export-section">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="col-first">
+                <div class="user-info">
+                    <div class="top-header">
+                        <h1>Full Name</h1>
+                        <div class="user-image">
+                            <img src="images/user.jpg">
+                        </div>
+                    </div>
+                    <div class="user-info-basic">
+                        <h2>"Better people make better leaders"</h2>
 
+                        <div>Age : 24y</div>
+                        <div>Address: No.23, Park Street, New Zealand</div>
+                        <div>Profession: Student</div>
+                        <div>Language: English</div>
+                        <div>Gender: Female</div>
+                    </div>
+
+                </div>
+                <div class="user-info-devices">
+                    <h2>Devices & Platform</h2>
+                    <table class="table-responsive device-table">
+                            <tr>
+                                <th></th>
+                                <th><img src="images/phone.png"></th>
+                                <th><img src="images/tabo.png"></th>
+                                <th><img src="images/desktop.png"></th>
+                                <th><img src="images/moniter.png"></th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="os-images"><img src="images/apple.png"></div>
+                                </td>
+                                <td>
+                                    <div class="roundedTwo">
+                                        <input type="checkbox"  id="ios-mobile"  checked />
+                                        <label for="ios-mobile"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="roundedTwo">
+                                        <input type="checkbox" id="ios-tab"  checked/>
+                                        <label for="ios-tab"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="roundedTwo">
+                                        <input type="checkbox"  id="ios-laptop" />
+                                        <label for="ios-laptop"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="roundedTwo">
+                                        <input type="checkbox"  id="ios-desktop"  />
+                                        <label for="ios-desktop"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="os-images"><img src="images/windows.png"></div>
+                                </td>
+                                <td>
+                                    <div class="roundedTwo">
+                                        <input type="checkbox"  id="windows-mobile"  checked />
+                                        <label for="windows-mobile"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="roundedTwo">
+                                        <input type="checkbox" id="windows-tab"  checked/>
+                                        <label for="windows-tab"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="roundedTwo">
+                                        <input type="checkbox"  id="windows-laptop" checked/>
+                                        <label for="windows-laptop"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="roundedTwo">
+                                        <input type="checkbox"  id="windows-desktop"  checked/>
+                                        <label for="windows-desktop"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="os-images"><img src="images/android.png"></div>
+                                </td>
+                                <td>
+                                    <div class="roundedTwo">
+                                        <input type="checkbox"  id="android-mobile"  checked />
+                                        <label for="android-mobile"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="roundedTwo">
+                                        <input type="checkbox" id="android-tab"  checked/>
+                                        <label for="android-tab"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="roundedTwo">
+                                        <input type="checkbox"  id="android-laptop" />
+                                        <label for="android-laptop"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="roundedTwo">
+                                        <input type="checkbox"  id="android-desktop"/>
+                                        <label for="android-desktop"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="os-images"><img src="images/linux.png"></div>
+                                </td>
+                                <td>
+                                    <div class="roundedTwo">
+                                        <input type="checkbox"  id="linux-mobile"  checked />
+                                        <label for="linux-mobile"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="roundedTwo">
+                                        <input type="checkbox" id="linux-tab"  checked/>
+                                        <label for="linux-tab"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="roundedTwo">
+                                        <input type="checkbox"  id="linux-laptop" checked/>
+                                        <label for="linux-laptop"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="roundedTwo">
+                                        <input type="checkbox"  id="linux-desktop"  checked/>
+                                        <label for="linux-desktop"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                    </table>
+                </div>
+
+                <div class="user-info-interest">
+                    <h2>Interest Areas</h2>
+
+                    <div>Reading</div>
+                    <div>Movies</div>
+                    <div>Entertainment</div>
+                    <div>News</div>
+                    <div>Music</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4" >
+            <div class="panel panel-ux">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Technical proficiency</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="tech-details">
+                        Computer literacy
+                        <br>
+                        <input id="tech-1" type="text" class="tech-slider" data-slider-value="1"/>
+                    </div>
+
+                    <div class="tech-details">
+                        USing Software:
+                        <br>
+                        <input id="tech-2" type="text" class="tech-slider" data-slider-value="3"/>
+                    </div>
+
+                    <div class="tech-details">
+                        Internet:
+                        <br>
+                        <input id="tech-3" type="text" class="tech-slider" data-slider-value="5"/>
+                    </div>
+
+                    <div class="tech-details">
+                        Smart Phone Usage:
+                        <br>
+                        <input id="tech-4" type="text" class="tech-slider" data-slider-value="5"/>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-4" >
+
+        </div>
+    </div>
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="libs/jquery_1.11.0/jquery-1.11.3.min.js"></script>
-
 <script src="libs/jsPDF-1.1.239/jspdf.min.js"></script>
+<script src="libs/bootstrap-slider-5.3.1/bootstrap-slider.min.js"></script>
 <script src="libs/html2canvas-0.5.0/html2canvas.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script>
+    $(".tech-slider").slider({ min: 0, max: 5, focus: true });
+
+
     (function(){
         var
-                form = $('body'),
+                form = $('.export-section'),
                 cache_width = form.width(),
                 a4  =[ 595.28,  841.89];  // for a4 size paper width and height
 
         $('#create_pdf').on('click',function(){
-            $('body').scrollTop(0);
+            $('.export-section').scrollTop(0);
             createPDF();
         });
 //create pdf
