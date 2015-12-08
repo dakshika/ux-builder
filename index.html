@@ -9,7 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="libs/theme-wso2_1.0/fonts/webfonts.css" rel="stylesheet" type="text/css" />
     <!-- Font Awesome CSS -->
     <link href="libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
@@ -97,7 +97,7 @@
 
 <div class="container-fluid export-section">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="col-first">
                 <div class="user-info">
                     <div class="top-header">
@@ -115,8 +115,8 @@
                         <div>Language: English</div>
                         <div>Gender: Female</div>
                     </div>
-
                 </div>
+                <div class="box-seperator"></div>
                 <div class="user-info-devices">
                     <h2>Devices & Platform</h2>
                     <table class="table-responsive device-table">
@@ -245,15 +245,17 @@
                             </tr>
                     </table>
                 </div>
-
+                <div class="box-seperator"></div>
                 <div class="user-info-interest">
                     <h2>Interest Areas</h2>
+                    <div class="user-info-interest-list">
+                        <div class="interest-list-point">Reading</div>
+                        <div class="interest-list-point">Movies</div>
+                        <div class="interest-list-point">Entertainment</div>
+                        <div class="interest-list-point">News</div>
+                        <div class="interest-list-point">Music</div>
+                    </div>
 
-                    <div>Reading</div>
-                    <div>Movies</div>
-                    <div>Entertainment</div>
-                    <div>News</div>
-                    <div>Music</div>
                 </div>
             </div>
         </div>
@@ -290,10 +292,60 @@
                 </div>
             </div>
 
+            <div class="panel panel-ux">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Must Do</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="must-do-points">
+                        01. I want to browse products with Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                        the 1500s
+                    </div>
+                    <div class="must-do-points">
+                        02. It must have a Item search/filtering simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    </div>
+                    <div class="must-do-points">
+                        04. Verify sharing to selected media simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    </div>
+                    <div class="must-do-points">
+                        03. I want to be notified on subscriptions simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="col-md-4" >
+            <div class="panel panel-ux">
+                <div class="panel-heading">
+                    <h3 class="panel-title">User Experience Goals</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="ux-goals">01. Browse items listed in the store.</div>
+                    <div class="ux-goals">02. Subscribe to Items in the store.</div>
+                    <div class="ux-goals">03. Share Items on social media.</div>
+                </div>
+            </div>
 
+            <div class="panel panel-ux">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Must Never</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="must-never-points">
+                        01. No adverts while browsing Lorem Ipsum is simply dummy text of the printing and typesetting
+                    </div>
+                    <div class="must-never-points">
+                        02. Paginations on pages Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                    </div>
+                    <div class="must-never-points">
+                        03. No form filling for subscriptions dummy text of the printing and typesetting industry.
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -306,7 +358,12 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script>
-    $(".tech-slider").slider({ min: 0, max: 5, focus: true });
+    $(".tech-slider").slider({
+        ticks_labels : ["0", "1", "2", "3", "4", "5"],
+        ticks_snap_bounds:1,
+        ticks:[0, 1, 2, 3, 4,5],
+        focus: true
+    });
 
 
     (function(){
