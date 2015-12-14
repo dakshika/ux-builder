@@ -101,7 +101,7 @@
             <div class="col-first">
                 <div class="user-info">
                     <div class="top-header">
-                        <h1>Full Name</h1>
+                        <h1 class="persona-name">Full Name</h1>
                         <div class="user-image">
                             <img src="images/user.jpg">
                         </div>
@@ -249,11 +249,11 @@
                 <div class="user-info-interest">
                     <h2>Interest Areas</h2>
                     <div class="user-info-interest-list">
-                        <div class="interest-list-point">Reading</div>
-                        <div class="interest-list-point">Movies</div>
-                        <div class="interest-list-point">Entertainment</div>
-                        <div class="interest-list-point">News</div>
-                        <div class="interest-list-point">Music</div>
+                        <div class="interest-list-point editable-b">Reading</div>
+                        <div class="interest-list-point editable-b">Movies</div>
+                        <div class="interest-list-point editable-b">Entertainment</div>
+                        <div class="interest-list-point editable-b">News</div>
+                        <div class="interest-list-point editable-b">Music</div>
                     </div>
 
                 </div>
@@ -295,23 +295,22 @@
             <div class="panel panel-ux">
                 <div class="panel-heading">
                     <h3 class="panel-title">Must Do</h3>
+                    <div class="add-new">
+                        <i class="fw-add fw-2x"></i>
+                    </div>
                 </div>
                 <div class="panel-body">
-                    <div class="must-do-points">
-                        01. I want to browse products with Lorem Ipsum is simply dummy text of the printing and
+                    <div class="must-do-points editable">01. I want to browse products with Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
                         the 1500s
                     </div>
-                    <div class="must-do-points">
-                        02. It must have a Item search/filtering simply dummy text of the printing and typesetting
+                    <div class="must-do-points editable">02. It must have a Item search/filtering simply dummy text of the printing and typesetting
                         industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                     </div>
-                    <div class="must-do-points">
-                        04. Verify sharing to selected media simply dummy text of the printing and typesetting
+                    <div class="must-do-points editable">04. Verify sharing to selected media simply dummy text of the printing and typesetting
                         industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                     </div>
-                    <div class="must-do-points">
-                        03. I want to be notified on subscriptions simply dummy text of the printing and typesetting
+                    <div class="must-do-points editable">03. I want to be notified on subscriptions simply dummy text of the printing and typesetting
                         industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                     </div>
                 </div>
@@ -322,26 +321,32 @@
             <div class="panel panel-ux">
                 <div class="panel-heading">
                     <h3 class="panel-title">User Experience Goals</h3>
+                    <div class="add-new">
+                        <i class="fw-add fw-2x"></i>
+                    </div>
                 </div>
                 <div class="panel-body">
-                    <div class="ux-goals">01. Browse items listed in the store.</div>
-                    <div class="ux-goals">02. Subscribe to Items in the store.</div>
-                    <div class="ux-goals">03. Share Items on social media.</div>
+                    <div class="ux-goals editable">01. Browse items listed in the store.</div>
+                    <div class="ux-goals editable">02. Subscribe to Items in the store.</div>
+                    <div class="ux-goals editable">03. Share Items on social media.</div>
                 </div>
             </div>
 
             <div class="panel panel-ux">
-                <div class="panel-heading">
+                <div class="panel-heading ">
                     <h3 class="panel-title">Must Never</h3>
+                    <div class="add-new">
+                        <i class="fw-add fw-2x"></i>
+                    </div>
                 </div>
                 <div class="panel-body">
-                    <div class="must-never-points">
-                        01. No adverts while browsing Lorem Ipsum is simply dummy text of the printing and typesetting
+                    <div class="must-never-points editable">01. No adverts while browsing Lorem Ipsum is simply dummy
+                        text of the printing and typesetting
                     </div>
-                    <div class="must-never-points">
+                    <div class="must-never-points editable">
                         02. Paginations on pages Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                     </div>
-                    <div class="must-never-points">
+                    <div class="must-never-points editable">
                         03. No form filling for subscriptions dummy text of the printing and typesetting industry.
                     </div>
                 </div>
@@ -353,8 +358,12 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="libs/jquery_1.11.0/jquery-1.11.3.min.js"></script>
 <script src="libs/jsPDF-1.1.239/jspdf.min.js"></script>
+<script src="libs/jquery_jeditable-1.7.3/jquery.jeditable.js"></script>
+<script src="libs/jquery_jeditable-1.7.3/jquery.jeditable.autogrow.js"></script>
+<script src="libs/jquery.autogrow-1.2.2/jquery.autogrow.js"></script>
 <script src="libs/bootstrap-slider-5.3.1/bootstrap-slider.min.js"></script>
 <script src="libs/html2canvas-0.5.0/html2canvas.min.js"></script>
+<script src="js/custom.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script>
@@ -367,8 +376,7 @@
 
 
     (function(){
-        var
-                form = $('.export-section'),
+        var form = $('.export-section'),
                 cache_width = form.width(),
                 a4  =[ 595.28,  841.89];  // for a4 size paper width and height
 
