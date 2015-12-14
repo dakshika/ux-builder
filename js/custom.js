@@ -1,6 +1,6 @@
 var editableField = function(className, fieldType){
 
-    var fieldType = fieldType || 'textarea'
+    var fieldType = fieldType || 'text';
     $(className).editable(function(value, settings) {
         console.log(this);
         console.log(value);
@@ -14,14 +14,32 @@ var editableField = function(className, fieldType){
 
 $(document).ready(function(){
     editableField('.editable','textarea');
-    editableField('.editable-b','textarea');
+    editableField('.editable-b');
 
-    $('.add-new').click(function(){
+    $('.add-new-line').click(function(){
         var editableBlock = $(this).parent().parent().find('.panel-body div').size() +1 ;
         $(this).parent().parent().find('.panel-body').append("<div class='must-never-points editable'>"+editableBlock +
             '. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</div>');
 
         editableField('.editable','textarea');
+    });
+
+    $('#add-new-slider').click(function() {
+        var template = '<div class="tech-details">'+
+                        '<span class="editable-b">Sample Title:</span>'+
+                        '<div>'+
+                        '<input id="tech-3" type="text" class="tech-slider" data-slider-value="'+
+                        Math.floor(Math.random() * 6)+
+                        '"/>'+
+                        '</div></div>';
+        $(this).parent().parent().find('.panel-body').append(template);
+        editableField('.editable-b');
+        $(".tech-slider").slider({
+            ticks_labels: ["0", "1", "2", "3", "4", "5"],
+            ticks_snap_bounds: 1,
+            ticks: [0, 1, 2, 3, 4, 5],
+            focus: true
+        });
     });
 
 
