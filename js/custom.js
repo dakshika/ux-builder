@@ -1,3 +1,13 @@
+jQuery.browser = {};
+(function () {
+    jQuery.browser.msie = false;
+    jQuery.browser.version = 0;
+    if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+        jQuery.browser.msie = true;
+        jQuery.browser.version = RegExp.$1;
+    }
+})();
+
 var editableField = function(className, fieldType){
 
     var fieldType = fieldType || 'text';
@@ -13,7 +23,7 @@ var editableField = function(className, fieldType){
 }
 
 $(document).ready(function(){
-    editableField('.editable','textarea');
+    editableField('.editable','autogrow');
     editableField('.editable-b');
 
     $('.add-new-line').click(function(){
