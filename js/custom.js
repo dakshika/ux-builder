@@ -17,8 +17,7 @@ var editableField = function(className, fieldType){
         console.log(settings);
         return(value);
     }, {
-        type    : fieldType,
-        submit  : 'OK',
+        type    : fieldType
     });
 }
 
@@ -31,12 +30,12 @@ $(document).ready(function(){
         $(this).parent().parent().find('.panel-body').append("<div class='must-never-points editable'>"+editableBlock +
             '. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</div>');
 
-        editableField('.editable','textarea');
+        editableField('.editable','autogrow');
     });
 
     $('#add-new-slider').click(function() {
         var template = '<div class="tech-details">'+
-                        '<span class="editable-b">Sample Title:</span>'+
+                        '<div class="editable-b">Sample Title:</div>'+
                         '<div>'+
                         '<input id="tech-3" type="text" class="tech-slider" data-slider-value="'+
                         Math.floor(Math.random() * 6)+
