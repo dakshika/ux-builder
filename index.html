@@ -101,19 +101,36 @@
             <div class="col-first">
                 <div class="user-info">
                     <div class="top-header">
-                        <h1 class="persona-name">Full Name</h1>
+                        <h1 class="persona-name editable-b">Full Name</h1>
                         <div class="user-image">
                             <img src="images/user.jpg">
                         </div>
                     </div>
                     <div class="user-info-basic">
-                        <h2>"Better people make better leaders"</h2>
+                        <h2 class="editable-b">"Better people make better leaders"</h2>
 
-                        <div>Age : 24y</div>
-                        <div>Address: No.23, Park Street, New Zealand</div>
-                        <div>Profession: Student</div>
-                        <div>Language: English</div>
-                        <div>Gender: Female</div>
+                        <table class="user-info-table">
+                            <tr>
+                                <td align="right">Age : </td>
+                                <td align="left" class="editable-b">24y</td>
+                            </tr>
+                            <tr>
+                                <td align="right">Address : </td>
+                                <td align="left" class="editable-b">No.23, Park Street, New Zealand</td>
+                            </tr>
+                            <tr>
+                                <td align="right">Profession : </td>
+                                <td align="left" class="editable-b">Student</td>
+                            </tr>
+                            <tr>
+                                <td align="right">Language : </td>
+                                <td align="left" class="editable-b">English</td>
+                            </tr>
+                            <tr>
+                                <td align="right">Gender : </td>
+                                <td align="left" class="editable-gender">Female</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
                 <div class="box-seperator"></div>
@@ -277,7 +294,7 @@
                     </div>
 
                     <div class="tech-details">
-                        <div class="editable-b"> USing Software:</div>
+                        <div class="editable-b"> Using Software:</div>
                         <div>
                             <input id="tech-2" type="text" class="tech-slider" data-slider-value="3"/>
                         </div>
@@ -384,7 +401,7 @@
 
     (function(){
         var form = $('.export-section'),
-                cache_width = form.width(),
+             //   cache_width = form.width(),
                 a4  =[ 595.28,  841.89];  // for a4 size paper width and height
 
         $('#create_pdf').on('click',function(){
@@ -397,18 +414,19 @@
                 var
                         img = canvas.toDataURL("image/png"),
                         doc = new jsPDF({
+                            orientation:'landscape',
                             unit:'px',
-                            format:'a4'
+                            format:'a4',
                         });
                 doc.addImage(img, 'JPEG', 0, 0);
                 doc.save('persona.pdf');
-                form.width(cache_width);
+             //   form.width(cache_width);
             });
         }
 
 // create canvas object
         function getCanvas(){
-            form.width((a4[0]*1.33333)).css('max-width','none');
+
             return html2canvas(form,{
                 imageTimeout:2000,
                 removeContainer:true

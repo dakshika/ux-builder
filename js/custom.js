@@ -17,9 +17,24 @@ var editableField = function(className, fieldType){
         console.log(settings);
         return(value);
     }, {
-        type    : fieldType
+        type    : fieldType,
+        submit  : 'Save',
+        tooltip   : "Click to edit..."
     });
 }
+
+$('.editable-gender').editable(function(value, settings) {
+    console.log(this);
+    console.log(value);
+    console.log(settings);
+    return(value);
+}, {
+    type   : "select",
+    data   : "{'Male':'Male','Female':'Female'}",
+    submit  : 'Save',
+    tooltip   : "Click to edit..."
+});
+
 
 $(document).ready(function(){
     editableField('.editable','autogrow');
